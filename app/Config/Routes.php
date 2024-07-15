@@ -8,8 +8,8 @@ use CodeIgniter\Router\RouteCollection;
 
 $routes->get('/', 'Home::index', ['filter' => 'auth']);
 
-$routes->get('login', 'RedirectController::login');
-$routes->post('login', 'RedirectController::login');
+$routes->get('login', 'AuthController::login');
+$routes->post('login', 'AuthController::login');
 $routes->get('logout', 'AuthController::logout');
 
 $routes->group('produk',['filter'=>'auth'], function($routes){
